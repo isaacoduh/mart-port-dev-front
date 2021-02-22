@@ -1,24 +1,9 @@
 # martport.frontend
 
-## Project setup
-```
-npm install
-```
+## Key Information
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+- Built with Vue JS v2.6
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Key Learnings
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- Working with typescript in a vue application
