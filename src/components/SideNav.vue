@@ -8,6 +8,12 @@
       />
     </router-link>
     <h1>MartPort App</h1>
+    <base-button
+      id="menuCustomers"
+      is-full-width
+      @button:click="goToRoute('/customers')"
+      >Manage Customers</base-button
+    >
   </div>
 </template>
 

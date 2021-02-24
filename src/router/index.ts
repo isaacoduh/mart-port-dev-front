@@ -1,10 +1,14 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import HelloWorld from "@/components/HelloWorld.vue";
+import Customers from "@/views/Customers.vue";
 
 Vue.use(VueRouter);
 
-const routes = [{ path: "/", name: "home", component: HelloWorld }];
+const routes = [
+  { path: "/", name: "home", component: HelloWorld },
+  { path: "/customers", name: "customers", component: Customers }
+];
 
 const router = new VueRouter({
   mode: "history",

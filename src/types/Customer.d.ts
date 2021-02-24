@@ -4,7 +4,7 @@ export interface ICustomer {
   updatedAt?: Date;
   firstName?: string;
   lastName?: string;
-  customerDetails?: ICustomerDetail;
+  customerDetail?: ICustomerDetail;
 }
 
 export interface ICustomerDetail {
