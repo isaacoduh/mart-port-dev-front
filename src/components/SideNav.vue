@@ -9,6 +9,12 @@
     </router-link>
     <h1>MartPort App</h1>
     <base-button
+      id="menuInventory"
+      is-full-width
+      @button:click="goToRoute('/stock')"
+      >Manage Stock</base-button
+    >
+    <base-button
       id="menuCustomers"
       is-full-width
       @button:click="goToRoute('/customers')"
