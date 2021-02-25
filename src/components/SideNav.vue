@@ -20,6 +20,18 @@
       @button:click="goToRoute('/customers')"
       >Manage Customers</base-button
     >
+    <base-button
+      id="menuInvoice"
+      is-full-width
+      @button:click="goToRoute('/invoice/new')"
+      >Create Invoice</base-button
+    >
+    <base-button
+      id="menuOrders"
+      is-full-width
+      @button:click="goToRoute('/orders')"
+      >Orders</base-button
+    >
   </div>
 </template>
 
