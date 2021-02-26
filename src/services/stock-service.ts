@@ -2,6 +2,7 @@ import axios from "axios";
 
 import { IMaterialStock } from "@/types/Material";
 import { IShipment } from "@/types/Shipment";
+import { IStockTimeline } from "@/types/StockGraph";
 // timeline
 
 export class StockService {
@@ -17,5 +18,8 @@ export class StockService {
     return result.data;
   }
 
-  // intentor timeline
+  public async getSnapshotHistory(): Promise<IStockTimeline> {
+    let result: any = await axios.get(`${this.API_URL}/stock/snapshot`);
+    return result.data;
+  }
 }

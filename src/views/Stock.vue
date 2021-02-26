@@ -2,7 +2,7 @@
   <div class="inventory-container">
     <h1 id="inventoryTitle">Dashboard</h1>
     <hr />
-    <!-- Inventory Chart -->
+    <stock-chart />
     <div class="inventory-actions">
       <base-button @button:click="showCreateMaterialModal" id="addNewBtn"
         >Add New Material Information</base-button
@@ -70,13 +70,14 @@ import { MaterialService } from "../services/material-service";
 import BaseButton from "@/components/BaseButton.vue";
 import CreateMaterialModal from "@/components/modals/CreateMaterialModal.vue";
 import ShipmentModal from "@/components/modals/ShipmentModal.vue";
+import StockChart from "@/components/charts/StockChart.vue";
 
 const stockService = new StockService();
 const materialService = new MaterialService();
 
 @Component({
   name: "Stock",
-  components: { BaseButton, CreateMaterialModal, ShipmentModal }
+  components: { BaseButton, CreateMaterialModal, ShipmentModal, StockChart }
 })
 export default class Stock extends Vue {
   isCreateMaterialVisible: boolean = false;
@@ -124,7 +125,7 @@ export default class Stock extends Vue {
   }
   async initialize() {
     this.stock = await stockService.getStock();
-    //   await this.$store.dispatch("")
+    await this.$store.dispatch("assignSnaphots");
   }
   async created() {
     await this.initialize();
